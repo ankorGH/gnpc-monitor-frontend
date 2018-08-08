@@ -8,6 +8,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   color:#fff;
+  height: 100vh;
 }
 
 .App-intro {
@@ -16,6 +17,7 @@
 
 #App-container{
   background-color: rgba(23,106,144, 0.80);
+  height: 100vh;
 }
 
 @keyframes App-logo-spin {
@@ -23,10 +25,10 @@
   to { transform: rotate(360deg); }
 }
 #register-title{
-  padding-top: 70px;
+  padding-top: 10vh;
 }
 
 .disclaimer{
-  margin-top: 8%;
+  margin-top: 8vh;
 }
 
