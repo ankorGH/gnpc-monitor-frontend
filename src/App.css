@@ -4,8 +4,9 @@
 .App {
   font-family: 'Montserrat',sans-serif;
   text-align: center;
-  background-image: url("./images/std.jpg");
-  background-size: 100%;
+  background-image: url("https://res.cloudinary.com/devlesscloud/image/upload/v1533764546/std-compressor_gvepxl.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   color:#fff;
 }
 
