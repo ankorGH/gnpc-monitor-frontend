@@ -27,32 +27,30 @@ class App extends Component {
     })
   }
 
-  submitForm = async (e) => {
-    try{
-      e.preventDefault();
-      const baseUrl = `https://gnpcscholarshipapp.herokuapp.com/users`;
-
-      const opts = {
-        name:this.state.name,
-        email:this.state.email
+  submitForm = (e) => {
+    e.preventDefault();
+    const baseUrl = `https://gnpcscholarshipapp.herokuapp.com/users`;
+    
+    const opts = {
+      name:this.state.name,
+      email:this.state.email
+    }
+    
+    fetch(baseUrl,{
+      method:"POST",
+      body:JSON.stringify(opts),
+      headers:{
+        "Content-type":"application/json",
+        "Access-Control-Allow-Origin":"*",
+        "Access-Control-Allow-Headers":"*"
+      },
+    })
+    .then((resp) => {
+      return resp.json()
+    }).then((data) => {
+      if(!data.error){
+        this.setState({isRegistered:true})
       }
-
-      const headers = new Headers()
-      headers.append('Content-Type', 'application/json')
-      headers.append("Access-Control-Allow-Origin", "*")
-      headers.append("Access-Control-Allow-Headers", "*")
-
-      const response = await fetch(baseUrl,{
-        method: "POST",
-        headers,
-        body: JSON.stringify(opts)
-      })
-      console.log(response.status)
-      this.setState({isRegistered:true})
-  } catch(e){
-    console.log(e)}
-  }
-
 
   register = () => {
     this.setState({isRegistered:false})

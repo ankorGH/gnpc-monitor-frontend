@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 .App {
@@ -24,11 +23,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-#register-title{
-  padding-top: 10vh;
+#app-body{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%)
 }
-
 .disclaimer{
-  margin-top: 8vh;
+  margin-top: 4vh;
 }
 
