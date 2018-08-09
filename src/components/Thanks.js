@@ -9,16 +9,16 @@ function Thank(props){
                 <div className="empty-icon">
                     <img src={mail}  alt="" width="80"/>
                 </div>
-                <p className="empty-title h5">Thanks for registering</p>
+                <p className="empty-title h5">Thanks for registering. You will receive an email immediately the GNPC scholarship is available</p>
                 <p className="empty-subtitle">Click the button below to register.</p>
                 <div className="empty-action">
                     <button className="btn btn-primary" onClick={props.register}>Register</button>
                 </div>
             </div>
-        </div> 
-      
+        </div>
+
     );
-  
+
 }
 
 export default Thank;
