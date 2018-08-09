@@ -51,9 +51,7 @@ class App extends Component {
       if(!data.error){
         this.setState({isRegistered:true})
       }
-    })
-  }
-  
+
   register = () => {
     this.setState({isRegistered:false})
   }
@@ -62,16 +60,12 @@ class App extends Component {
     return (
       <div className="App">
         <div id="App-container" className="container">
-          <div id="app-body" className="columns">
-             <div  className="column col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-6  col-mx-auto" >
-               <AppTitle />
-              { !this.state.isRegistered ? 
-                  <SignUp name={this.state.name} email={this.state.email} changeValue={this.updateValue}submit={this.submitForm}/>  
-                : <Thank register={this.register}/>
-              }
-              <Disclaimer className="disclaimer" />
-              </div>
-          </div>
+          <AppTitle />
+          { !this.state.isRegistered ?
+              <SignUp name={this.state.name} email={this.state.email} changeValue={this.updateValue}submit={this.submitForm}/>
+            : <Thank register={this.register}/>
+          }
+          <Disclaimer className="disclaimer" />
         </div>
       </div>
     );

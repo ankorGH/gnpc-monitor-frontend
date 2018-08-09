@@ -4,11 +4,12 @@ function AppTitle(){
     return (
         <div>
               <p>
-                Register to be the first to know when GNPC's generous scholarship drops 
+                Register to be the first to know when the GNPC scholarship is available 
             </p>
-        </div>    
+            </div>
+        </div>
     );
-  
+
 }
 
 export default AppTitle;
