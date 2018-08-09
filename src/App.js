@@ -68,8 +68,6 @@ class App extends Component {
             : <Thank register={this.register}/>
           }
           <Disclaimer className="disclaimer" />
-
-
         </div>
       </div>
     );
